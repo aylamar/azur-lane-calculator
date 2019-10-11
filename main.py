@@ -92,3 +92,6 @@ if (mob_for_boss != "true"):
 
     print("Your boss fleet's vanguard will earn a total of", bossv_total_exp, "EXP.")
     print("Your boss fleet's main fleet will earn a total of", bossm_total_exp, "EXP.")
+
+print()
+input("Press Enter to exit the program...")
