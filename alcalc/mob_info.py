@@ -1,5 +1,5 @@
 from alcalc.runs_left import runs
-from alcalc.ship_exp import calc_mob_exp, calc_boss_exp
+from alcalc.ship_exp import calc_mob_exp
 from alcalc.mob_exp import mobv_one_exp, mobv_two_exp, mobv_three_exp, mobm_one_exp, mobm_two_exp, mobm_three_exp
 from alcalc.levels import find_level, find_total_exp
 
