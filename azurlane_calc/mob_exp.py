@@ -24,8 +24,7 @@ def mob_vang_exp(runsLeft, currentLevel, i):
         expGained = (battlesBeforeBoss + 1) * expGained
     else:
         expGained = battlesBeforeBoss * expGained
-    expGained = int(expGained)
-
+    expGained = int(expGained * runsLeft)
     estLevel = calc_level(currentLevel, expGained)
 
     return expGained, estLevel
@@ -52,7 +51,7 @@ def mob_main_exp(runsLeft, currentLevel, i, flagship):
         expGained = (battlesBeforeBoss + 1) * expGained
     else:
         expGained = battlesBeforeBoss * expGained
-    expGained = int(expGained)
+    expGained = int(expGained * runsLeft)
 
     estLevel = calc_level(currentLevel, expGained)
 

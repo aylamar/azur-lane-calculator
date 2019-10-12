@@ -19,4 +19,8 @@ def runs():
         runsLeft = oil / (levelCost + (mobCost * (battlesBeforeBoss + 1)))
     else:
         runsLeft = oil / (levelCost + (mobCost * battlesBeforeBoss) + bossCost)
-    return oil, int(runsLeft)
+    runsLeft = int(runsLeft)
+
+    print()
+    print("You can run the map a total of", runsLeft, "more times.")
+    return oil, runsLeft

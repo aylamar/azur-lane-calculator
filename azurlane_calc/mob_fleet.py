@@ -20,7 +20,7 @@ def mob_vang(runsLeft):
         morale = config.get("Mob Vanguard Ship "+str(i+1), "hasMoraleBonus")
         expGained, estLevel = mob_vang_exp(runsLeft, level, i)
         if name != "none":
-            mobVang.append(VangShip(name,mvp,level,morale,expGained,estLevel))
+            mobVang.append(VangShip(name,level,mvp,morale,expGained,estLevel))
         else:
             break
 
@@ -36,7 +36,7 @@ def mob_main(runsLeft):
         flagship = config.get("Mob Main Ship "+str(i+1), "flagship")
         expGained, estLevel = mob_main_exp(runsLeft, level, i, flagship)
         if name != "none":
-            mobMain.append(MainShip(name,mvp,level,morale,flagship,expGained,estLevel))
+            mobMain.append(MainShip(name,level,mvp,morale,flagship,expGained,estLevel))
         else:
             break
 

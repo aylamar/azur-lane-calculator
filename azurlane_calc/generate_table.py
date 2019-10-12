@@ -15,6 +15,7 @@ def generate_mob_table(mobVang, mobMain):
     for i in range (len(mobMain)):
         table.add_row([mobMain[i].name, mobMain[i].expGained, mobMain[i].level, mobMain[i].estLevel])
     print(table)
+
 def generate_boss_table(bossVang, bossMain):
     if useMobForBoss == "true":
         pass
