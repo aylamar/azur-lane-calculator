@@ -42,7 +42,7 @@ def generate_boss_table(bossVang, bossMain):
             mainEXP += bossMain[i].expGained
         
         print()
-        print("Here is what your mob fleet will gain:")
+        print("Here is what your boss fleet will gain:")
         print(table)
         print("Your vanguard will gain a total of", vangEXP, "EXP.")
         print("Your main fleet will gain a total of", mainEXP, "EXP.")
