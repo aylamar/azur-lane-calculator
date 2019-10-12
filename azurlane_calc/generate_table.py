@@ -5,8 +5,6 @@ from prettytable import PrettyTable
 config = configparser.ConfigParser(allow_no_value=True, comment_prefixes='#')
 config.read('config.ini')
 
-useMobForBoss = config.get("Mob Fleet General", "useMobForBoss")
-
 def generate_mob_table(mobVang, mobMain):
     table = PrettyTable()
     table.field_names = ["Ship Name", "EXP Gained", "Current Level", "Est Level"]
@@ -27,6 +25,7 @@ def generate_mob_table(mobVang, mobMain):
     print("Your main fleet will gain a total of", mainEXP, "EXP.")
 
 def generate_boss_table(bossVang, bossMain):
+    useMobForBoss = config.get("Mob Fleet General", "useMobForBoss")
     if useMobForBoss == "true":
         pass
     else:
