@@ -31,14 +31,14 @@ def generate_config():
     config['Mob Vanguard Ship 2'] = {
     'name': 'none',
     'level': '0',
-    'mvp': '0',
+    'mvp': 'false',
     'hasMoraleBonus': 'true',
     }
 
     config['Mob Vanguard Ship 3'] = {
     'name': 'none',
     'level': '0',
-    'mvp': '0',
+    'mvp': 'false',
     'hasMoraleBonus': 'true',
     }
 
@@ -55,7 +55,7 @@ def generate_config():
     'name': 'none',
     'level': '0',
     'mvp': 'false',
-    'flagship': 'true',
+    'flagship': 'false',
     'mvp': 'false',
     'hasMoraleBonus': 'true',
     }
@@ -64,7 +64,7 @@ def generate_config():
     'name': 'none',
     'level': '0',
     'mvp': 'false',
-    'flagship': 'true',
+    'flagship': 'false',
     'mvp': 'false',
     'hasMoraleBonus': 'true',
     }
@@ -76,21 +76,21 @@ def generate_config():
     config['Boss Vanguard Ship 1'] = {
     'name': 'Sandy',
     'level': '115',
-    'mvp': 'true',
+    'mvp': 'false',
     'hasMoraleBonus': 'true',
     }
 
     config['Boss Vanguard Ship 2'] = {
     'name': 'none',
     'level': '0',
-    'mvp': '0',
+    'mvp': 'false',
     'hasMoraleBonus': 'true',
     }
 
     config['Boss Vanguard Ship 3'] = {
     'name': 'none',
     'level': '0',
-    'mvp': '0',
+    'mvp': 'false',
     'hasMoraleBonus': 'true',
     }
 
@@ -98,7 +98,7 @@ def generate_config():
     'name': 'Washington',
     'level': '115',
     'flagship': 'true',
-    'mvp': 'false',
+    'mvp': 'true',
     'hasMoraleBonus': 'true',
     }
 
@@ -120,5 +120,5 @@ def generate_config():
 
     write_file()
     print("Config file has been generated, please modify the values in the file then startup the program again.")
-    input("Press enter to exit the program.")
+    input("Press Enter to exit the program..")
     exit()
