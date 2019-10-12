@@ -119,6 +119,6 @@ def generate_config():
     }
 
     write_file()
-    print("Config file has been generated, please modify the values in the file then startup the program again.")
+    print("A config file has been generated, please modify the values in the file then startup the program again.")
     input("Press Enter to exit the program..")
     exit()
