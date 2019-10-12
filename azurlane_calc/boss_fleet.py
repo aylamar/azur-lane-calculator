@@ -1,5 +1,6 @@
 import configparser
 from azurlane_calc.ship import MainShip, VangShip
+from azurlane_calc.boss_exp import boss_vang_exp, boss_main_exp
 
 config = configparser.ConfigParser(allow_no_value=True, comment_prefixes='#')
 config.read('config.ini')
@@ -16,8 +17,9 @@ def boss_vang(runsLeft):
         mvp = config.get("Boss Vanguard Ship "+str(i+1), "mvp")
         level = config.get("Boss Vanguard Ship "+str(i+1), "level")
         morale = config.get("Boss Vanguard Ship "+str(i+1), "hasMoraleBonus")
+        expGained, estLevel = boss_vang_exp(runsLeft, level, i)
         if name != "none":
-            bossVang.append(VangShip(name,mvp,level,morale))
+            bossVang.append(VangShip(name,mvp,level,morale,expGained,estLevel))
         else:
             break
 
@@ -31,8 +33,9 @@ def boss_main(runsLeft):
         level = config.get("Boss Main Ship "+str(i+1), "level")
         morale = config.get("Boss Main Ship "+str(i+1), "hasMoraleBonus")
         flagship = config.get("Boss Main Ship "+str(i+1), "flagship")
+        expGained, estLevel = boss_main_exp(runsLeft, level, i, flagship)
         if name != "none":
-            bossMain.append(MainShip(name,mvp,level,morale,flagship))
+            bossMain.append(MainShip(name,mvp,level,morale,flagship,expGained,estLevel))
         else:
             break
 

@@ -18,11 +18,11 @@ oil, runsLeft = runs()
 
 #Generate fleet information
 mobVang, mobMain = generate_mob(runsLeft)
-#bossVang, bossMain = generate_boss(runsLeft)
+bossVang, bossMain = generate_boss(runsLeft)
 
 print(mobVang[0].name, mobVang[0].expGained)
-#print(bossVang[0].name)
+print(bossVang[0].name, bossMain[0].expGained)
 
-#print(len(bossMain))
+print(len(bossMain))
 
 print(oil, runsLeft)
