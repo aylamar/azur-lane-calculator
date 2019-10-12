@@ -45,5 +45,5 @@ Here is what your mob fleet will gain:
 |  Shouhou   |   32472    |      110      |    111    |
 +------------+------------+---------------+-----------+
 Your vanguard will gain a total of 64944 EXP.
-Your main fleet will gain a total of 162426 EXP.```
+Your main fleet will gain a total of 162426 EXP.
 ```
