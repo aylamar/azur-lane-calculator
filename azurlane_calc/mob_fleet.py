@@ -1,30 +1,32 @@
 import configparser
 from azurlane_calc.ship import MainShip, VangShip
+from azurlane_calc.mob_exp import mob_vang_exp, mob_main_exp
 
 config = configparser.ConfigParser(allow_no_value=True, comment_prefixes='#')
 config.read('config.ini')
 
-def generate_mob():
-    mobVang = mob_vang()
-    mobMain = mob_main()
+def generate_mob(runsLeft):
+    mobVang = mob_vang(runsLeft)
+    mobMain = mob_main(runsLeft)
 
     return mobVang, mobMain
 
-def mob_vang():
+def mob_vang(runsLeft):
     mobVang = []
     for i in range (3):
         name = config.get("Mob Vanguard Ship "+str(i+1), "name")
         mvp = config.get("Mob Vanguard Ship "+str(i+1), "mvp")
         level = config.get("Mob Vanguard Ship "+str(i+1), "level")
         morale = config.get("Mob Vanguard Ship "+str(i+1), "hasMoraleBonus")
+        expGained, estLevel = mob_vang_exp(runsLeft, level, i)
         if name != "none":
-            mobVang.append(VangShip(name,mvp,level,morale))
+            mobVang.append(VangShip(name,mvp,level,morale,expGained,estLevel))
         else:
             break
 
     return mobVang
 
-def mob_main():
+def mob_main(runsLeft):
     mobMain = []
     for i in range (3):
         name = config.get("Mob Main Ship "+str(i+1), "name")
@@ -32,8 +34,9 @@ def mob_main():
         level = config.get("Mob Main Ship "+str(i+1), "level")
         morale = config.get("Mob Main Ship "+str(i+1), "hasMoraleBonus")
         flagship = config.get("Mob Main Ship "+str(i+1), "flagship")
+        expGained, estLevel = mob_main_exp(runsLeft, level, i, flagship)
         if name != "none":
-            mobMain.append(MainShip(name,mvp,level,morale,flagship))
+            mobMain.append(MainShip(name,mvp,level,morale,flagship,expGained,estLevel))
         else:
             break
 

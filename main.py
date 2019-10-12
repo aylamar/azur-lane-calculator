@@ -1,6 +1,7 @@
 import configparser, os, sys
 from azurlane_calc.mob_fleet import generate_mob
 from azurlane_calc.boss_fleet import generate_boss
+from azurlane_calc.runs_left import runs
 
 from prettytable import PrettyTable
 
@@ -12,11 +13,16 @@ from prettytable import PrettyTable
 config = configparser.ConfigParser(allow_no_value=True, comment_prefixes='#')
 config.read('config.ini')
 
+#Calculate runsLeft
+oil, runsLeft = runs()
+
 #Generate fleet information
-mobVang, mobMain = generate_mob()
-bossVang, bossMain = generate_boss()
+mobVang, mobMain = generate_mob(runsLeft)
+#bossVang, bossMain = generate_boss(runsLeft)
 
-print(mobVang[0].name)
-print(bossVang[0].name)
+print(mobVang[0].name, mobVang[0].expGained)
+#print(bossVang[0].name)
 
-print(len(bossMain))
+#print(len(bossMain))
+
+print(oil, runsLeft)

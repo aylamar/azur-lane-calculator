@@ -4,12 +4,12 @@ from azurlane_calc.ship import MainShip, VangShip
 config = configparser.ConfigParser(allow_no_value=True, comment_prefixes='#')
 config.read('config.ini')
 
-def generate_boss():
-    bossVang = boss_vang()
-    bossMain = boss_main()
+def generate_boss(runsLeft):
+    bossVang = boss_vang(runsLeft)
+    bossMain = boss_main(runsLeft)
     return bossVang, bossMain
 
-def boss_vang():
+def boss_vang(runsLeft):
     bossVang = []
     for i in range (3):
         name = config.get("Boss Vanguard Ship "+str(i+1), "name")
@@ -23,7 +23,7 @@ def boss_vang():
 
     return bossVang
 
-def boss_main():
+def boss_main(runsLeft):
     bossMain = []
     for i in range (3):
         name = config.get("Boss Main Ship "+str(i+1), "name")
