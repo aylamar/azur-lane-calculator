@@ -18,5 +18,5 @@ def runs():
     if mobForBoss == 'true':
         runsLeft = oil / (levelCost + (mobCost * (battlesBeforeBoss + 1)))
     else:
-        runs_left = oil / (levelCost + (mobCost * battlesBeforeBoss) + bossCost)
+        runsLeft = oil / (levelCost + (mobCost * battlesBeforeBoss) + bossCost)
     return oil, int(runsLeft)

@@ -18,7 +18,7 @@ def boss_vang_exp(runsLeft, currentLevel, i):
     if mvp == "true":
         expGained *= 2
 
-    expGained = int(expGained)
+    expGained = int(expGained) * runsLeft
 
     estLevel = calc_level(currentLevel, expGained)
 
@@ -40,7 +40,7 @@ def boss_main_exp(runsLeft, currentLevel, i, flagship):
     if mvp == "true":
         expGained *= 2
 
-    expGained = int(expGained)
+    expGained = int(expGained) * runsLeft
 
     estLevel = calc_level(currentLevel, expGained)
 

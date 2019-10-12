@@ -2,8 +2,7 @@ import configparser, os, sys
 from azurlane_calc.mob_fleet import generate_mob
 from azurlane_calc.boss_fleet import generate_boss
 from azurlane_calc.runs_left import runs
-
-from prettytable import PrettyTable
+from azurlane_calc.generate_table import generate_mob_table, generate_boss_table
 
 #Create config file if one doesn't exist already
 #if not os.path.exists('config.ini'):
@@ -20,9 +19,5 @@ oil, runsLeft = runs()
 mobVang, mobMain = generate_mob(runsLeft)
 bossVang, bossMain = generate_boss(runsLeft)
 
-print(mobVang[0].name, mobVang[0].expGained)
-print(bossVang[0].name, bossMain[0].expGained)
-
-print(len(bossMain))
-
-print(oil, runsLeft)
+generate_mob_table(mobVang, mobMain)
+generate_boss_table(bossVang, bossMain)
