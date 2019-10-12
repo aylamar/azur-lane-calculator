@@ -34,7 +34,7 @@ Here is what your mob fleet will gain:
 Your vanguard will gain a total of 325036 EXP.
 Your main fleet will gain a total of 487555 EXP.       
 
-Here is what your mob fleet will gain:
+Here is what your boss fleet will gain:
 +------------+------------+---------------+-----------+
 | Ship Name  | EXP Gained | Current Level | Est Level |
 +------------+------------+---------------+-----------+
