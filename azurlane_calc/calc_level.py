@@ -15,6 +15,8 @@ def find_total_exp(level):
 
 def find_level(total_exp):
     i = 0
-    while total_exp > total_exp_array[i] and i < 119:
+    while total_exp > total_exp_array[i]:
         i += 1
-    return i+1
+        if i == 120:
+            break
+    return i
