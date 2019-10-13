@@ -47,3 +47,51 @@ Here is what your boss fleet will gain:
 Your vanguard will gain a total of 64944 EXP.
 Your main fleet will gain a total of 162426 EXP.
 ```
+
+## Config Explained
+```
+[General]
+#The cost to enter a map, usually 10
+levelCost = 10
+#The number of battles before the boss appears
+#This value can be found on the wiki
+battlesBeforeBoss = 6
+#EXP rate for the fleet size fought most commonly with no bonuses
+#This value can be found on the wiki
+baseEXP = 621
+#True if mob fleet S ranks most battles, otherwise false
+sRankNormal = true
+#EXP rate for the boss with no bonuses
+#This value can be found on the wiki
+bossEXP = 826
+#True if boss is cleared with S rank, otherwise false
+sRankBoss = true
+
+[Mob Fleet General]
+#True if the mob fleet is used for the boss, otherwise false
+useMobForBoss = false
+#Oil cost of your mob fleet
+oilCost = 49
+
+[Mob Vanguard Ship 1]
+#Name of mob fleet vanguard ship 1
+name = San Diego
+#Level of ship
+level = 115
+#True if mvp in most fights, otherwise false
+mvp = true
+#True if ship has 120 morale or more (sparkling happy face), otherwise false
+hasMoraleBonus = true
+
+[Mob Main Ship 1]
+#Name of mob fleet main fleet ship 1
+name = Formidable
+#Level of ship
+level = 117
+#True if mvp in most fights, otherwise false
+mvp = false
+#True if flagship, otherwise false
+flagship = false
+#True if ship has 120 morale or more (sparkling happy face), otherwise false
+hasMoraleBonus = true
+```
